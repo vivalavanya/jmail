@@ -1,6 +1,6 @@
 {
   "name": "jmail",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "convert your json to html email",
   "main": "index.js",
   "bin": "index.js",

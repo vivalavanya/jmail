@@ -93,7 +93,6 @@ var JMail = /** @class */ (function () {
                 for (s in obj) {
                     styles[obj[s].key] = obj[s].value;
                 }
-                console.log(styles);
                 return [2 /*return*/, JSON.stringify(styles)];
             });
         });
@@ -101,42 +100,3 @@ var JMail = /** @class */ (function () {
     return JMail;
 }());
 exports.JMail = JMail;
-var json = {
-    "clientId": "60ed5e2edbe37461cb33960f",
-    "formEmail": "string1",
-    "toEmail": "string2",
-    "subjectEmail": "string3",
-    "childs": [
-        {
-            "tag": "p",
-            "content": "Hello world",
-            "styles": [
-                {
-                    "key": "color",
-                    "value": "red"
-                },
-                {
-                    "key": "background",
-                    "value": "green"
-                }
-            ],
-            "childs": [
-                {
-                    "tag": "span",
-                    "content": "this is span",
-                    "styles": [
-                        {
-                            "key": "color",
-                            "value": "blue"
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "id": "60ed8d70d03e697fa034c745"
-};
-var jm = new JMail;
-jm.toHtml(json.childs).then(function (r) {
-    console.log(r);
-});

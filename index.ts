@@ -1,6 +1,7 @@
 import * as pug from 'pug';
 
 export class JMail {
+    constructor(){}
     async toHtml(obj : any ): Promise<String> {
         var pugString = await this.getTag(obj)
         var html = pug.render(pugString)
