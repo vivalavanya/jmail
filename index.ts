@@ -22,5 +22,4 @@ export class JMail {
         }
         return  JSON.stringify(styles);
     }
-
 }
