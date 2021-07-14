@@ -1,0 +1,28 @@
+{
+  "name": "jmail",
+  "version": "1.0.0",
+  "description": "convert your json to html email",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivalavanya/jmail.git"
+  },
+  "keywords": [
+    "js",
+    "html",
+    "email",
+    "typescript",
+    "ts",
+    "javascript",
+    "convert"
+  ],
+  "author": "vivalavanya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivalavanya/jmail/issues"
+  },
+  "homepage": "https://github.com/vivalavanya/jmail#readme"
+}
