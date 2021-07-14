@@ -2,8 +2,10 @@
   "name": "jmail",
   "version": "1.0.0",
   "description": "convert your json to html email",
-  "main": "index.ts",
+  "main": "src/index.ts",
+  "bin": "src/index.ts",
   "scripts": {
+    "start": "node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
