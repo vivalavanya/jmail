@@ -36,24 +36,46 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.JMail = void 0;
-var getTag_1 = require("./helpers/getTag");
-var JMail = /** @class */ (function () {
-    function JMail() {
-    }
-    JMail.prototype.toHtml = function (obj) {
-        return __awaiter(this, void 0, void 0, function () {
-            var pugString;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, getTag_1.getTag(obj)];
-                    case 1:
-                        pugString = _a.sent();
-                        return [2 /*return*/, pugString];
-                }
-            });
+exports.getTag = void 0;
+var pug = require("pug");
+var getStyles_1 = require("./getStyles");
+function getTag(json) {
+    return __awaiter(this, void 0, void 0, function () {
+        var html, _i, json_1, item, _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
+        return __generator(this, function (_m) {
+            switch (_m.label) {
+                case 0:
+                    html = [];
+                    _i = 0, json_1 = json;
+                    _m.label = 1;
+                case 1:
+                    if (!(_i < json_1.length)) return [3 /*break*/, 7];
+                    item = json_1[_i];
+                    if (!(item.childs && item.childs.length > 0)) return [3 /*break*/, 4];
+                    _b = (_a = html).push;
+                    _d = (_c = pug).render;
+                    _e = item.tag + "(style=";
+                    return [4 /*yield*/, getStyles_1.getStyles(item.styles)];
+                case 2:
+                    _f = _e + (_m.sent()) + ") " + item.content + "\n\t";
+                    return [4 /*yield*/, getTag(item.childs)];
+                case 3:
+                    _b.apply(_a, [_d.apply(_c, [_f + (_m.sent())])]);
+                    return [3 /*break*/, 6];
+                case 4:
+                    _h = (_g = html).push;
+                    _k = (_j = pug).render;
+                    _l = item.tag + "(style=";
+                    return [4 /*yield*/, getStyles_1.getStyles(item.styles)];
+                case 5:
+                    _h.apply(_g, [_k.apply(_j, [_l + (_m.sent()) + ") " + item.content])]);
+                    _m.label = 6;
+                case 6:
+                    _i++;
+                    return [3 /*break*/, 1];
+                case 7: return [2 /*return*/, html.join('')];
+            }
         });
-    };
-    return JMail;
-}());
-exports.JMail = JMail;
+    });
+}
+exports.getTag = getTag;

@@ -36,24 +36,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.JMail = void 0;
-var getTag_1 = require("./helpers/getTag");
-var JMail = /** @class */ (function () {
-    function JMail() {
-    }
-    JMail.prototype.toHtml = function (obj) {
-        return __awaiter(this, void 0, void 0, function () {
-            var pugString;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, getTag_1.getTag(obj)];
-                    case 1:
-                        pugString = _a.sent();
-                        return [2 /*return*/, pugString];
-                }
-            });
+exports.getStyles = void 0;
+function getStyles(obj) {
+    return __awaiter(this, void 0, void 0, function () {
+        var styles, s;
+        return __generator(this, function (_a) {
+            styles = {};
+            for (s in obj) {
+                styles[obj[s].key] = obj[s].value;
+            }
+            return [2 /*return*/, JSON.stringify(styles)];
         });
-    };
-    return JMail;
-}());
-exports.JMail = JMail;
+    });
+}
+exports.getStyles = getStyles;
