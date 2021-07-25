@@ -11,32 +11,32 @@
 
 ```json
 [
- {
-   "tag": "p",
-   "content": "Hello world",
-   "styles": [
 	{
-	  "key": "color",
-	  "value": "red"
-	},
-	{
-	  "key": "background",
-	  "value": "green"
+		"tag": "p",
+		"content": "Hello world",
+		"styles": [
+			{
+				"key": "color",
+				"value": "red"
+			},
+			{
+				"key": "background",
+				"value": "green"
+			}
+		],
+		"childs": [
+			{
+				"tag": "span",
+				"content": "this is span",
+				"styles": [
+					{
+						"key": "color",
+						"value": "blue"
+					}
+				]
+			}
+		]
 	}
-   ],
-   "childs": [
-	{
-	  "tag": "span",
-	  "content": "this is span",
-	  "styles": [
-		{
-		  "key": "color",
-		  "value": "blue"
-		}
-	  ]
-	}
-    ]
-  }
 ]
 ```
 - `tag`  html тэг
@@ -50,7 +50,7 @@
 
 #### Пример реализации
 
-```
+```js
 const { JMail } = require('jmail');
 
 const jm = new JMail();
