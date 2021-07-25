@@ -9,35 +9,35 @@
 
 #### Пример входного JSON
 
-```
+```json
 [
+ {
+   "tag": "p",
+   "content": "Hello world",
+   "styles": [
+	{
+	  "key": "color",
+	  "value": "red"
+	},
+	{
+	  "key": "background",
+	  "value": "green"
+	}
+   ],
+   "childs": [
+	{
+	  "tag": "span",
+	  "content": "this is span",
+	  "styles": [
 		{
-			"tag": "p",
-			"content": "Hello world",
-			"styles": [
-				{
-					"key": "color",
-					"value": "red"
-				},
-				{
-					"key": "background",
-					"value": "green"
-				}
-			],
-			"childs": [
-				{
-					"tag": "span",
-					"content": "this is span",
-					"styles": [
-						{
-							"key": "color",
-							"value": "blue"
-						}
-					]
-				}
-			]
+		  "key": "color",
+		  "value": "blue"
 		}
-	]
+	  ]
+	}
+    ]
+  }
+]
 ```
 - `tag`  html тэг
 - `content` - контент внутри html тега
